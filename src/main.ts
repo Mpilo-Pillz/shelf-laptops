@@ -8,6 +8,8 @@ import '../public/style.css'
 import '../public/forms.css'
 import '../public/buttons.css'
 
+import '../public/styles/header.css';
+
 
 Vue.config.productionTip = false
 
