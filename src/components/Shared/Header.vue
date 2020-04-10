@@ -61,7 +61,9 @@ export default {
 </script>
 
 <style scoped>
-
+    .close {
+        display: none;
+    }
 /* a {
     color: #000000;
 } */

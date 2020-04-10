@@ -12,7 +12,8 @@ export default Vue.extend({
     methods: {
         getAllLaptops() {
           axios.get('http://localhost:3000/api/laptops')
-          .then(laptops => console.log(laptops));  
+          .then(laptops => console.log(laptops))
+          .catch(error => console.log(error));  
         }
     },
     beforeMount() {

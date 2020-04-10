@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import Laptops from '../views/Laptops.vue';
+import AddLaptop from '../views/AddLaptop.vue';
 
 Vue.use(VueRouter)
 
@@ -15,6 +16,11 @@ const routes = [
     path: '/laptops',
     name: 'Laptops',
     component: Laptops
+  },
+  {
+    path: '/add-laptop',
+    name: 'AddLaptop',
+    component: AddLaptop
   },
   {
     path: '/about',
