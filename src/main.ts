@@ -9,6 +9,7 @@ import '../public/forms.css'
 import '../public/buttons.css'
 
 import '../public/styles/header.css';
+import '../public/styles/cards.css';
 
 
 Vue.config.productionTip = false

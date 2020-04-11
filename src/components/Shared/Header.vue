@@ -36,7 +36,7 @@
             </ul>
         </nav>
    <nav class="mobile-nav">
-        <ul class="mobile-nav__items">
+        <ul class="mobile-nav__items close">
 
             <router-link to="/" tag="li" active-class="mobile-nav__item--cta" exact> 
                    <span class="mobile-nav__item"><a>Home</a></span>
