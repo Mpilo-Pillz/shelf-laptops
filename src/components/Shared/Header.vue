@@ -32,6 +32,10 @@
                     <router-link to="/laptops" tag="li" active-class="main-nav__item--cta">
                     <span class="main-nav__item"><a>Laptops</a></span> 
                     </router-link>
+
+                     <router-link to="/add-laptop" tag="li" active-class="main-nav__item--cta">
+                    <span class="main-nav__item"><a>Add Laptop</a></span> 
+                    </router-link>
                 
             </ul>
         </nav>
@@ -48,6 +52,10 @@
             
             <router-link to="/laptops" tag="li" active-class="mobile-nav__item--cta">
                 <span class="mobile-nav__item"><a>Laptops</a></span> 
+            </router-link>
+
+            <router-link to="/add-laptop" tag="li" active-class="mobile-nav__item--cta">
+                <span class="mobile-nav__item"><a>Add Laptop</a></span> 
             </router-link>
         </ul>
     </nav>

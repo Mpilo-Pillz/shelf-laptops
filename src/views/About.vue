@@ -21,7 +21,7 @@
             1960s with the release of Letraset sheets containing Lorem 
             Ipsum passages, and more recently with desktop publishing software 
             like Aldus PageMaker including versions of Lorem Ipsum.
-            <img width="400" height="400" src="https://static.wixstatic.com/media/81de36_2c40596358d9457d9eebbdb0ac23c659~mv2_d_3264_4080_s_4_2.jpg/v1/crop/x_0,y_429,w_3264,h_2765/fill/w_610,h_512,al_c,q_80,usm_0.66_1.00_0.01/Nabeel_-16.webp" alt="">
+            <img width="400" height="400" src="https://picsum.photos/id/1015/367/267" alt="">
             <br><br>
             Contrary to popular belief, Lorem Ipsum is not simply random text. 
             It has roots in a piece of classical Latin literature from 45 BC, 
