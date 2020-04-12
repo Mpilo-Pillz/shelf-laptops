@@ -1,7 +1,7 @@
 <template>
     <header class="main-header">
         <div>
-            <button class="toggle-button">
+            <button @click="toggleBurgerMenu" class="toggle-button">
                 <span class="toggle-button__bar"></span>
                 <span class="toggle-button__bar"></span>
                 <span class="toggle-button__bar"></span>
@@ -39,8 +39,8 @@
                 
             </ul>
         </nav>
-   <nav class="mobile-nav">
-        <ul class="mobile-nav__items close">
+   <nav class="mobile-nav" :class="{open: isOpen}">
+        <ul class="mobile-nav__items" >
 
             <router-link to="/" tag="li" active-class="mobile-nav__item--cta" exact> 
                    <span class="mobile-nav__item"><a>Home</a></span>
@@ -64,21 +64,25 @@
 
 <script>
 export default {
-    name: 'appHeader'
+    name: 'appHeader',
+    data () {
+        return {
+            isOpen: true
+        }
+    },
+    methods: {
+        toggleBurgerMenu: function () {
+            this.isOpen = !this.isOpen;
+        }
+    }
 }
 </script>
 
 <style scoped>
-    .close {
-        display: none;
+    .open {
+        display: inline-block;
     }
-/* a {
-    color: #000000;
-} */
-/* .site-logo {
-    max-height: 80px;
-    background-size: cover;
-} */
+
 
 .text__font--black {
     color: #000000;

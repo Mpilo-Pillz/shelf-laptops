@@ -103,11 +103,11 @@
   }
 
   .mobile-nav {
-        display: block;
+        display: none;
         margin: 0 auto;
         width: 100%;
         position: absolute;
-        top: 90px;
+        top: 55px;
         left: 0;
         background-color: #1c1c1c;
         z-index: 1000;
@@ -175,7 +175,6 @@
     padding-top: 0;
     padding-bottom: 0;
     vertical-align: middle;
-    display: none;
   }
 
   .toggle-button:focus {
@@ -191,11 +190,10 @@
   }
 
   .site-logo {
-    max-height: 80px;
+    /* max-height: 80px; */
     background-size: cover;
-
-    /* height: 2.5rem;
-  vertical-align: middle; */
+    height: 2.5rem;
+    vertical-align: middle;
 
 }
 
@@ -212,6 +210,11 @@
     .main-nav {
       display: flex;
     }
+
+    .site-logo {
+      max-height: 80px;
+      background-size: cover;
+  }
   }
 
   
