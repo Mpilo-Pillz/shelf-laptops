@@ -1,12 +1,8 @@
 <template>
 <div>
-    <!-- <div class="white-space">
-
-    </div> -->
     
-    <div class="jumbotron">
-       <h1 class="jumbo--text">ABOUT NABEEL</h1> 
-    </div>
+    
+    <app-jumbotron />
     
     <section class="section-about">
         <div class="more-about">
@@ -68,8 +64,12 @@
 </template>
 
 <script>
+import appJumbotron from '../../src/components/Shared/Jumbotron'
 export default {
-  name: 'About'  
+  name: 'About',
+  components: {
+      appJumbotron
+  }  
 }
 </script>
 

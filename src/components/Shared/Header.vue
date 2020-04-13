@@ -67,7 +67,7 @@ export default {
     name: 'appHeader',
     data () {
         return {
-            isOpen: true
+            isOpen: false
         }
     },
     methods: {

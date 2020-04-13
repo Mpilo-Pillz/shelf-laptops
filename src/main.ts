@@ -10,6 +10,8 @@ import '../public/buttons.css'
 
 import '../public/styles/header.css';
 import '../public/styles/cards.css';
+import '../public/styles/footer.css';
+import '../public/styles/home.css';
 
 
 Vue.config.productionTip = false

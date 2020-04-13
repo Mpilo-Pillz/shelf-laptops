@@ -1,55 +1,53 @@
 <template>
 <div>
-    <!-- <div class="white-space">
+
+    <app-jumbotron />
+    
+    <!-- <div class="header-image parallax ">
+        <div class="header-info">
+            <h2 class="header-title">LOOKING TO GET A LAPTOP</h2>
+            <div class="header-text">
+                Click the below button to search and find the best bargain for a laptop
+            </div>
+            <router-link to="/laptops">
+            <button class="roll-button">Browse Laptops</button>
+            </router-link>
+        </div>
+        <div class="main-content">
+            <div class="container">
+                <div class="row">
+                   <div class="content-area col-md-9">
+                       </div> 
+                </div>
+                </div> 
+        </div>
 
     </div> -->
     
-    <div class="jumbotron jumbotron__bg-img">
-      <div class="jumbo--text">
-          <div class="hero-text-box">
-            <h1>Need a Laptop <br> At a bargain price</h1>
-            <a class="btn btn-full" href="#">Search For Laptops </a>
-            <a class="btn btn-ghost" href="#">Show me more </a>
-        </div>
-      </div>
-      
-    </div>
     
-    <section class="section-about">
-        <div class="more-about">
-               <h2 class="about-heading about-heading__border"> About Us </h2> 
-           <article>Lorem Ipsum is simply dummy text of the printing 
-            and typesetting industry. Lorem Ipsum has been the 
-            industry's standard dummy text ever since the 1500s, 
-            when an unknown printer took a galley of type and scrambled 
-            it to make a type specimen book. It has survived not only five 
-            centuries, but also the leap into electronic typesetting, 
-            remaining essentially unchanged. It was popularised in the 
-            1960s with the release of Letraset sheets containing Lorem 
-            Ipsum passages, and more recently with desktop publishing software 
-            like Aldus PageMaker including versions of Lorem Ipsum.
-            
-            <br><br>
-            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,
-            <br><br>
-            <router-link to="/about">...More about Us</router-link>
-            </article>
-        </div>
-        <div class="about-video">
+    <!-- <div class="about-video">
             <h2 class="about-heading">Search Laptop Model</h2>
               <input class="form-control" type="text" placeholder="Search">
-        </div>
-
-    </section>
-</div>    
+        </div> -->
+</div>  
+  
 </template>
 
+
 <script>
+import appJumbotron from '../../src/components/Shared/Jumbotron'
 export default {
   name: 'Home',
-  components: {
-       
-   },  
+   components: {
+       appJumbotron
+   },
+  methods: {
+      goToLaptops: () => {
+        //   this.$router.push('laptops')
+        console.log("learn more")
+      }
+  },
+   
 }
 </script>
 

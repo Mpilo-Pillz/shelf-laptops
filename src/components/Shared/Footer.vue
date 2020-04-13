@@ -1,35 +1,11 @@
 <template>
-    <footer class="footer-style header__flex">
-
-        
-          <ul class="social-links">
-                <li><a href="#">
-                    <i id="facebook">
-                            
-                    </i>
-                </a>
-                </li>
-
-                <li><a href="#">
-                        <i id="twitter">
-                                
-                        </i>
-                    </a>
-                </li>
-                <li><a href="#">
-                        <i id="googleplus">
-                                
-                        </i>
-                    </a>
-                </li>
-                <li><a href="#">
-                        <i id="instagram">
-                                
-                        </i>
-                    </a>
-                </li>
-            </ul>
-    </footer>
+    <div>
+        <footer class="site-footer">
+            <div class="site-info container">
+                &COPY; MPILO
+            </div>
+        </footer>
+    </div>
 </template>
 
 <script>
