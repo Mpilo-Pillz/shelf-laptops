@@ -14,7 +14,10 @@
         <div class="card__footer">
           <p class="card__price">R{{laptop.price}}</p>
           <a href="/laptops" class="card__link">Read More...</a>
+          <button @click="deleteLaptop(laptop._id) in laptop">Delete</button>
+          <button>Edit</button>
         </div>
+        
       </figure>
     </div>
   </div>
@@ -25,6 +28,11 @@ import Vue from "vue";
 import axios from "axios";
 export default Vue.extend({
   name: "Laptops",
+  data() {
+    return {
+      allLaptops: []
+    };
+  },
   methods: {
     getAllLaptops() {
       axios
@@ -34,12 +42,15 @@ export default Vue.extend({
           this.allLaptops = laptops.data.laptops;
         })
         .catch(error => console.log(error));
+    },
+    deleteLaptop(id: string) {
+      axios.delete(`http://localhost:3000/api/laptops/${id}`)
+      .then(response => {
+        const updatedLaptops = this.allLaptops.filter(laptop => laptop['_id'] !== id);
+        this.allLaptops = updatedLaptops;
+        console.log(response);
+      }).catch(error => console.log(error));
     }
-  },
-  data() {
-    return {
-      allLaptops: []
-    };
   },
   created() {
     this.getAllLaptops();
