@@ -15,7 +15,7 @@
           <p class="card__price">R{{laptop.price}}</p>
           <a href="/laptops" class="card__link">Read More...</a>
           <button @click="deleteLaptop(laptop._id) in laptop">Delete</button>
-          <button>Edit</button>
+          <button @click="editLaptop(laptop._id) in laptop">Edit</button>
         </div>
         
       </figure>
@@ -25,6 +25,8 @@
 
 <script lang="ts">
 import Vue from "vue";
+import $router from "vue-router";
+import AddLaptop from "./AddLaptop.vue";
 import axios from "axios";
 export default Vue.extend({
   name: "Laptops",
@@ -50,6 +52,16 @@ export default Vue.extend({
         this.allLaptops = updatedLaptops;
         console.log(response);
       }).catch(error => console.log(error));
+    },
+    editLaptop(id: string) {
+      axios
+        .get(`http://localhost:3000/api/laptops/${id}`)
+        .then(laptops => {
+          console.log(laptops);
+          this.allLaptops = laptops.data.laptops;
+        })
+        .catch(error => console.log(error));
+      this.$router.push({ name: 'AddLaptop', params: { id } })
     }
   },
   created() {
