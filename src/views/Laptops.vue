@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container laptop--view-height">
     <h1>Laptops</h1>
     <div class="cards-container">
       <figure v-for="(laptop, laptopIndex) in allLaptops" :key="laptopIndex" class="card">
@@ -75,5 +75,9 @@ h1 {
   color: orange;
   margin: 100px;
   display: block;
+}
+
+.laptop--view-height {
+  min-height: 80vh;
 }
 </style>
