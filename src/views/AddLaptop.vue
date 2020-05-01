@@ -47,21 +47,29 @@
         <div class="input">
           <label for="image">Image</label>
           <input type="text" id="image" v-model="Laptop.image" />
+          <!-- <button type="button">Upload image</button> -->
+          <input type="file" name="" id="" @change="onImagePicked($event)">
         </div>
 
         <div class="submit">
           <button type="submit">Submit</button>
         </div>
       </form>
+      <class class="image-preview" v-if="imagePreview !== '' && imagePreview !== null">
+        <img :src="imagePreview" alt="">
+      </class>
     </div>
   </div>
 </template>
+
+
 
 <script>
 import Vue from "vue";
 import axios from "axios";
 export default Vue.extend({
   name: "AddLaptop",
+  props: ['imagePreview'],
   data() {
     return {
       Laptop: {
@@ -88,6 +96,16 @@ export default Vue.extend({
     },
     onDeleteHobby(id) {
       this.hobbyInputs = this.hobbyInputs.filter(hobby => hobby.id !== id);
+    },
+    onImagePicked(event) {
+      const file = event.target.files[0];
+      console.log('file-->',file);
+      const reader = new FileReader();
+      reader.onload = () => {
+        this.imagePreview = reader.result;
+      };
+      reader.readAsDataURL(file);
+      
     },
     onSubmit() {
       const laptop = {
@@ -221,4 +239,14 @@ export default Vue.extend({
   color: #ccc;
   cursor: not-allowed;
 }
+
+.image-preview {
+  height: 5rem;
+  margin: 1rem 0;
+}
+
+.image-preview img {
+  height: 100%;
+}
+
 </style>
