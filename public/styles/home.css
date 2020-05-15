@@ -1,9 +1,9 @@
-.container {
+/* .container {
     margin-right: auto;
     margin-left: auto;
     padding-left: 15px;
     padding-right: 15px;
-}
+} */
 
 .header-image {
     display: block; 
@@ -133,17 +133,17 @@
 }
 }
 
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
 .container {
     width: 970px;
 }
-}
+} */
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
 .container {
     width: 750px;
 }
-}
+} */
 
 @media (min-width: 40rem) {
 .laptop-description {

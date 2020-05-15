@@ -11,11 +11,11 @@
         </h2>
         <p class="card__detail">{{laptop.ram}}, {{laptop.processor}}, {{laptop.storage}}</p>
         <p class="card__detail">{{laptop.condition}}, {{laptop.misc}}. {{laptop.quantity}} left</p>
+        <a @click="deleteLaptop(laptop._id) in laptop">Delete</a>
+          <a @click="editLaptop(laptop._id) in laptop">Edit</a>
         <div class="card__footer">
           <p class="card__price">R{{laptop.price}}</p>
           <a href="/laptops" class="card__link">Read More...</a>
-          <button @click="deleteLaptop(laptop._id) in laptop">Delete</button>
-          <button @click="editLaptop(laptop._id) in laptop">Edit</button>
         </div>
         
       </figure>
@@ -78,6 +78,6 @@ h1 {
 }
 
 .laptop--view-height {
-  min-height: 80vh;
+  min-height: 70vh;
 }
 </style>
